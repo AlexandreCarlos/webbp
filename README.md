@@ -12,6 +12,19 @@ Best practices were learned from:
 * [Getting Bigger With Flask](http://maximebf.com/blog/2012/11/getting-bigger-with-flask/)
 * [Larger Applications With Flask](http://flask.pocoo.org/docs/patterns/packages/).
 
+
+## DB init and migration
+
+Once you have installed your DBMS, run the following to create your app's database tables and perform the initial migration:
+
+::
+
+    python manage.py db init
+    python manage.py db migrate
+    python manage.py db upgrade
+    python manage.py server
+
+
 ## License
 
 Flask-Foundation is licensed under the BSD license. For more info see LICENSE.md
@@ -19,3 +32,5 @@ Flask-Foundation is licensed under the BSD license. For more info see LICENSE.md
 # Want to learn more about Flask?
 
 I also wrote a book on Flask! You can order it [here](https://www.packtpub.com/web-development/mastering-flask).
+
+[Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
