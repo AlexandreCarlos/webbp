@@ -13,7 +13,7 @@
             <meta name="description" content="">
             <meta name="author" content="">
         {% endblock %}
-
+        <link rel="icon" href="{{ url_for('static', filename='public/images/favicon.ico') }}" type="image/x-icon">
         {% assets "common_css" %}
             <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}" />
         {% endassets %}
@@ -30,13 +30,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Blood Pressure</a>
+                <a class="navbar-brand" href="#">
+                <span>
+                    <img class='icon-home' width="10%" src="{{ url_for('static', filename='public/images/blood_pressure_diary.png') }}">
+                </span>
+                    Blood Pressure
+                </a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url_for('.home') }}">Home</a></li>
 
-                    {% if not current_user.is_authenticated() %}
+                    {% if not current_user.is_authenticated %}
                         <li><a href="{{ url_for('.login') }}">Login</a></li>
                     {% else %}
                         <li><a href="{{ url_for('.logout') }}">Logout</a></li>

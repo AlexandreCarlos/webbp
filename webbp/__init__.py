@@ -20,7 +20,7 @@ from webbp.extensions import (
 )
 
 
-def create_app(object_name):
+def create_app(object_name, env='dev'):
     """
     An flask application factory, as explained here:
     http://flask.pocoo.org/docs/patterns/appfactories/
